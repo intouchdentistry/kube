@@ -1,0 +1,1413 @@
+@font-face {
+  font-family: gingerbuck;
+  src: url("FONTS/gingerbuck-v2.otf") format("opentype"); }
+@font-face {
+  font-family: heartstrings;
+  src: url("FONTS/heartstrings.otf") format("opentype"); }
+@font-face {
+  font-family: hunterswood;
+  src: url("FONTS/hunterswood-v2.otf") format("opentype"); }
+@font-face {
+  font-family: Rembrandt;
+  src: url("FONTS/Rembrandt.otf") format("opentype"); }
+@-moz-keyframes spin1 {
+  100% {
+    -moz-transform: rotate(360deg);
+    background: rgba(227, 5, 117, 0.75); }
+  75% {
+    background: rgba(235, 107, 13, 0.75); }
+  50% {
+    background: rgba(212, 215, 3, 0.75); }
+  25% {
+    background: rgba(14, 138, 37, 0.75); }
+  0% {
+    background: rgba(227, 5, 117, 0.75); } }
+@-webkit-keyframes spin1 {
+  100% {
+    -webkit-transform: rotate(360deg);
+    background: rgba(227, 5, 117, 0.75); }
+  75% {
+    background: rgba(235, 107, 13, 0.75); }
+  50% {
+    background: rgba(212, 215, 3, 0.75); }
+  25% {
+    background: rgba(14, 138, 37, 0.75); }
+  0% {
+    background: rgba(227, 5, 117, 0.75); } }
+@keyframes spin1 {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background: rgba(227, 5, 117, 0.75); }
+  75% {
+    background: rgba(235, 107, 13, 0.75); }
+  50% {
+    background: rgba(212, 215, 3, 0.75); }
+  25% {
+    background: rgba(14, 138, 37, 0.75); }
+  0% {
+    background: rgba(227, 5, 117, 0.75); } }
+@-moz-keyframes spin2 {
+  100% {
+    -moz-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+  0% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes spin2 {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+  0% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spin2 {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+  0% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.animate_fadein {
+  transition: all 1.6s ease-in; }
+
+.animate_fadein2 {
+  transition: all 0.45s ease-in; }
+
+.animate_fadein3 {
+  transition: all 1.4s ease-in; }
+
+html, body {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  height: 100%; }
+
+.table {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  margin: 0 auto; }
+
+.table1 {
+  position: relative;
+  width: 50%; }
+
+.table2 {
+  position: relative;
+  top: -100%;
+  width: 50%; }
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%; }
+
+.behaelter_625 {
+  width: 525px;
+  height: 412px;
+  display: inline-block; }
+
+.behaelter_225 {
+  width: 325px;
+  height: 412px;
+  display: inline-block; }
+
+.kontakt_button {
+  height: 137px;
+  width: 200px;
+  cursor: pointer;
+  font-family: gingerbuck, Roboto, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  transition: 1s all ease;
+  font-size: 28px;
+  color: #141414; }
+  .kontakt_button:hover {
+    background: #e7671d;
+    color: white;
+    text-shadow: 1px 1px 10px black; }
+
+.kontakt1, .kontakt3 {
+  background: rgba(255, 255, 255, 0.6); }
+
+.kontakt2 {
+  background: rgba(235, 235, 235, 0.6); }
+
+.kontakt_aktiv {
+  background: #e7671d;
+  color: white; }
+
+.table_knoeppe_kontakt {
+  margin: 0; }
+
+.table_karte {
+  margin: 0;
+  right: 0;
+  position: absolute; }
+
+.karteniframe {
+  border: 0;
+  margin-left: -200px;
+  margin-top: -200px; }
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.rotierWuerfel {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 320px; }
+
+.rotierWuerfel2 {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 412px;
+  overflow: hidden; }
+
+header {
+  position: fixed;
+  height: 18%;
+  width: 100%;
+  z-index: 3;
+  color: white;
+  pointer-events: none; }
+
+.KUBE_Heim {
+  pointer-events: all; }
+
+#Heim {
+  height: 100%;
+  width: 100%; }
+
+.K_box {
+  right: 40px;
+  position: fixed;
+  top: 30px;
+  width: auto;
+  text-align: right;
+  transition: height 0.5s ease;
+  pointer-events: all; }
+
+.geschrumpft img, .geschrumpft #logoK {
+  height: 30px; }
+
+.K_box:hover .rotierR {
+  transform: rotateZ(360deg); }
+
+.K_box:hover .rotierL {
+  transform: rotateZ(-360deg); }
+
+.Logo_Bild {
+  position: relative;
+  display: block;
+  padding: 0.1em;
+  z-index: 1;
+  float: right;
+  height: 40px;
+  transition: 0.7s all ease-in; }
+
+#logoK {
+  height: 60px;
+  transition: 0.9s all ease-in; }
+
+#logoU {
+  transition: 0.7s all ease-in; }
+
+#logoB {
+  transition: 0.525s all ease-in; }
+
+#logoE {
+  transition: 0.35s all ease-in; }
+
+.Logo_Text {
+  position: relative;
+  display: block;
+  right: 0;
+  text-shadow: 0 0 7px black, 0 0 4px black, 1px 0 2px black, -1px 0 2px black, 0px 1px 2px black;
+  padding: 0.2em;
+  z-index: 1;
+  color: white;
+  font-family: hunterswood;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  transition: top 0.5s ease;
+  top: 12px; }
+
+.nach_oben_gerutscht {
+  top: 7px;
+  font-size: 1.3em;
+  font-family: gingerbuck;
+  letter-spacing: 5px; }
+
+#Scrollpfeil {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: -100px;
+  opacity: 0.88; }
+
+#Logo_Slogan, .sectionheading {
+  opacity: 0.96;
+  text-shadow: 0 0 7px black, 0 0 4px black, 1px 0 2px black, -1px 0 2px black, 0px 1px 2px black;
+  color: white;
+  line-height: 1;
+  text-align: center;
+  font-size: 3em;
+  padding: 0;
+  font-family: gingerbuck, Roboto, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500; }
+
+.menuknopp {
+  position: fixed;
+  width: 160px;
+  bottom: 30px;
+  padding: 18px 20px 20px;
+  left: 40px;
+  text-align: center;
+  color: white;
+  font-size: 1.8em;
+  border-left: 2px solid #0E8B2F;
+  border-bottom: 2px solid #D4D703;
+  border-top: 2px solid #EB6B0D;
+  border-right: 2px solid #E30575;
+  transition: 0.5s all ease-in;
+  text-shadow: 0 0 16px black, 0px -1px 3px black, -1px 0 3px black, 1px 0 3px black, 0px 1px 3px black;
+  font-family: gingerbuck, Roboto, sans-serif;
+  letter-spacing: 7px;
+  font-weight: 500;
+  z-index: 10;
+  cursor: pointer; }
+
+nav {
+  position: fixed;
+  z-index: 20;
+  bottom: 59px;
+  font-family: hunterswood;
+  font-size: 1.5em;
+  text-shadow: 0 0 7px black;
+  font-family: gingerbuck, Roboto, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  height: 380px;
+  width: 264px;
+  display: none;
+  pointer-events: none; }
+
+.menu {
+  transition: all 0.75s ease;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  z-index: 2;
+  pointer-events: none; }
+  .menu li {
+    margin: 0px 0px 0;
+    list-style: none;
+    font-size: 1px;
+    display: block;
+    transition: all 0.5s ease;
+    height: 32px;
+    font-size: 28px;
+    transform: scale(0);
+    pointer-events: all; }
+  .menu .rotated_li {
+    margin: 40px 0em;
+    transform: scale(1) rotateZ(-12deg); }
+  .menu .rotated_rotate2 {
+    transform: scale(1) rotateZ(9deg); }
+  .menu .rotated_rotate4 {
+    transform: scale(1) rotateZ(13deg); }
+  .menu .rotated_rotate0 {
+    transform: rotateZ(0deg); }
+
+.rotated_ul {
+  transform: rotateZ(360deg);
+  opacity: 1; }
+
+.rotate_slow {
+  transition: all 2s ease; }
+
+a {
+  text-decoration: none; }
+
+.scroll_anchor {position: absolute;}
+
+li a {
+  padding-top: 16px;
+  padding-bottom: 18px;
+  padding-right: 1em;
+  padding-left: 1em;
+  display: inline;
+  color: #fff; }
+
+li#rotate1 a:hover {
+  background: #0E8B2F; }
+
+li#rotate2 a:hover {
+  background: #D4D703; }
+
+li#rotate3 a:hover {
+  background: #EB6B0D; }
+
+li#rotate4 a:hover {
+  background: #E30575; }
+
+li #rotate0 a:hover {
+  border: 3px solid white; }
+
+#menu_kurse {
+  text-shadow: 0 0 6px #006224, 0px -1px 2px #006224, -1px 0 2px #006224, 1px 0 2px #006224, 0px 1px 2px #006224;
+  background-color: rgba(0, 137, 50, 0.75); }
+
+#menu_team {
+  text-shadow: 0 0 6px #8a8b02, 0px -1px 2px #8a8b02, -1px 0 2px #8a8b02, 1px 0 2px #8a8b02, 0px 1px 2px #8a8b02;
+  background-color: rgba(212, 213, 0, 0.75); }
+
+#menu_kontakt {
+  text-shadow: 0 0 6px #9d3b03, 0px -1px 2px #9d3b03, -1px 0 2px #9d3b03, 1px 0 2px #9d3b03, 0px 1px 2px #9d3b03;
+  background-color: rgba(231, 103, 29, 0.75); }
+
+#menu_photos {
+  text-shadow: 0 0 6px #84003d, 0px -1px 2px #84003d, -1px 0 2px #84003d, 1px 0 2px #84003d, 0px 1px 2px #84003d;
+  background-color: rgba(223, 0, 114, 0.75); }
+
+#menu_aktu {
+  text-shadow: 0 0 6px black, 0px -1px 2px black, -1px 0 2px black, 1px 0 2px black, 0px 1px 2px black;
+  background: rgba(255, 255, 255, 0.88); }
+
+#main {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; }
+
+.Kapitel {
+  position: relative;
+  display: block;
+  height: 100%;
+  margin-bottom: 15em;
+  transition: 0.5s all ease-out; }
+
+.ankuendigung_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.event_behaelter {
+  position: relative;
+  display: table;
+  width: 400px;
+  height: 412px;
+  }
+
+.ankuendigung_cell {
+
+}
+.event_logo {
+  margin: 0;
+  margin-bottom: 30px;
+  line-height: 0.75em;
+  font-size: 4em;
+  position: relative;
+  letter-spacing: -1px; 
+  
+}
+
+.event_datum {
+  text-align: center;
+  position: relative;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  padding: 0.75em;
+  color: #252525;
+  border-radius: 4px;
+  border: 2px solid #E30575; 
+}
+
+#ankuend_p {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 341px;
+  text-align: right;
+  position: relative;
+  padding: 0; }
+
+.floatright {
+  bottom: 8px;
+  left: -4px;
+  display: inline-block;
+  position: relative; }
+
+#Kapitel_Intro {
+  top: 0; }
+
+#Kapitel_Einblicke {
+  top: 40%;
+  background: rgba(223, 0, 114, 0.5); }
+
+#Kapitel_Team {
+  top: 40%;
+  background: rgba(212, 215, 3, 0.5); }
+
+#Kapitel_Kurse {
+  top: 40%;
+  background: rgba(0, 137, 50, 0.5);
+  transition: 1s all ease-out; }
+
+#Kapitel_Kontakt_Karte {
+  top: 40%;
+  background: rgba(231, 103, 29, 0.5); }
+
+/* #Kapitel_Aktuelles {top: 40%;background-color: rgba(48, 81, 66, 0.94);} */
+.section {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.88;
+  transition: 1s all ease-out; }
+
+#section_hg_kontakt {
+  width: 100%;
+  height: 100%;
+  background: url("../IMG/HG/KUBE_kontakt.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 140%; }
+
+.drehstein {
+  background: url("../IMG/icon_quad.png") no-repeat;
+  width: 150px;
+  background-position: center;
+  height: 150px;
+  display: inline-block;
+  background-size: contain;
+  position: relative;
+  animation: spin2 10s infinite reverse linear;
+  top: 50%;
+  left: calc(50% - 75px);
+  opacity: 0.5; }
+
+.in_arbeit {
+  top: 0;
+  display: block;
+  font-family: hunterswood;
+  letter-spacing: 1px;
+  font-size: 1.75em;
+  color: white;
+  z-index: 1;
+  position: relative; 
+  text-align: center;
+}
+
+.mit_schwarz_drunter {
+  background: black; }
+
+.temp {
+  opacity: 0.6; }
+
+/* In case I'll make a media query that centers the menu: li text-align cntr, .menu padding:0 */
+.frame {
+  position: relative; }
+
+.inhaltsbox {
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.inhaltsbox_links {
+  color: #333;
+  font-family: hunterswood, sans-serif;
+  letter-spacing: 0.07em;
+  font-weight: 200;
+  width: 419px;
+  float: left; }
+
+.inhaltsbox_rechts {
+  width: 419px;
+  float: right; }
+
+.sectionheading {
+  font-size: 34px;
+  position: absolute;
+  top: 20px;
+  text-align: left;
+  left: 40px;
+  display: inline; }
+
+.quoteHeim {
+  font-family: hunterswood, sans-serif;
+  box-sizing: border-box;
+  padding: 0 42px;
+  font-size: 1.5em;
+  display: table; }
+
+.quote {
+  color: #141414;
+  letter-spacing: 0.07em;
+  font-weight: 200;
+  width: 100%;
+  margin: auto;
+  transition: 0.8s all ease; }
+
+.mit_weissem_hg {
+  background: url(../IMG/leinwand.jpg);
+  background-size: cover; }
+
+.behaelter_zwei {
+  top: -100%;
+  left: 33.3333%; }
+
+.behaelter_drei {
+  top: -200%;
+  left: 66.666%; }
+
+.behaelter_vier {
+  top: -300%;
+  left: 100%; }
+
+.behaelter_2550 {
+  width: 300%;
+  height: 100%;
+  position: relative;
+  transition: 1s all ease-in;
+  left: 0; }
+
+.behaelter_850, .behaelter_850ankuendg {
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.behaelter_850ankuendg {
+  width: 100%; }
+
+.responsive_container {
+  width: 850px;
+  height: 412px; }
+
+.knopp {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: gingerbuck, Roboto, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  transition: 1s all ease;
+  font-size: 28px;
+  width: 50%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.6); }
+
+#knopp1, #knopp4 {
+  background: rgba(245, 245, 245, 0.6); }
+
+#knopp3, #knopp4 {
+  top: -100%;
+  left: 50%; }
+
+#knoppAlle {
+  top: -162.5%;
+  left: 36.5%;
+  background: #E2E2E2;
+  width: 27%;
+  height: 25%;
+  font-size: 1.45em; }
+
+.zurueckknopf {
+  height: 0px;
+  width: 0px;
+  top: calc(50% - 40px);
+  z-index: 3;
+  position: absolute;
+  cursor: pointer;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 50px solid white;
+  transition: 1s border-right ease; }
+
+.resultate {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: 0.8s all ease; }
+
+#kleinbild_zurueckknopf {
+  display: none; }
+
+.scrollbar_versteck {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  left: 80px;
+  overflow-x: hidden;
+  transition: width 0.7s ease; }
+  .scrollbar_versteck:hover {
+    width: 387px; }
+
+.erg_liste {
+  position: absolute;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2;
+  display: block;
+  min-width: 100%; }
+
+.rechteseite {
+  width: 367px;
+  position: absolute;
+  height: 100%;
+  right: 17px;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  z-index: 2; 
+}
+
+.gruen {
+  color: #0E8B2F; }
+
+.orange {
+  color: #EB6B0D; }
+
+.gelb {
+  color: #D4D703; }
+
+.lila {
+  color: #E30575; }
+
+.listen_streifen {
+  text-decoration: none;
+  display: block;
+  padding: 15px 10px;
+  padding-left: 40px;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s all ease;
+  font-family: hunterswood;
+  font-size: 1.3em;
+  font-weight: 600;
+  background: white;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 4px black;
+  color: #fff;
+  box-sizing: border-box; }
+  .listen_streifen:hover {
+    text-shadow: 1px 1px 12px black; }
+  .listen_streifen.schattenrand {
+    box-shadow: none; }
+
+.listen_streifen.gruen {
+  background: rgba(0, 137, 50, 0.88); }
+  .listen_streifen.gruen:hover {
+    background: rgba(0, 137, 50, 0.7); }
+
+.listen_streifen.orange {
+  background: rgba(231, 103, 29, 0.88); }
+  .listen_streifen.orange:hover {
+    background: rgba(231, 103, 29, 0.7); }
+
+.listen_streifen.gelb {
+  background: rgba(212, 213, 0, 0.88);
+  text-shadow: 0px 0px 12px white;
+  color: #000; }
+  .listen_streifen.gelb:hover {
+    background: rgba(212, 213, 0, 0.7);
+    text-shadow: 1px 1px 12px black;
+    color: #fff; }
+
+.listen_streifen.lila {
+  background: rgba(223, 0, 114, 0.88); }
+  .listen_streifen.lila:hover {
+    background: rgba(223, 0, 114, 0.7); }
+
+.termin_streifen {
+  padding: 1.2em 0 1.2em 0;
+  text-align: center; }
+
+.selektiert {
+  border: 2px solid white;
+  background: rgba(212, 213, 0, 0.7);
+  text-shadow: 1px 1px 12px black !important;
+  color: #fff !important; }
+
+.drei_thumbs {
+  height: 50px;
+  text-align: center; }
+
+.einzel_thumb {
+  border: 2px dashed #d4d500;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: inline-block; }
+
+.mittlerer_thumb {
+  margin-left: 4px;
+  margin-right: 4px; }
+
+.buchung_button_schulen {
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.88);
+  color: #000;
+  font-size: 1.4em;
+  letter-spacing: 5px;
+  font-family: gingerbuck, Roboto, sans-serif;
+  padding: 10px 10px 10px 14px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: table;
+  width: 200px; }
+  .buchung_button_schulen:hover {
+    background: #d4d500;
+    color: white; }
+
+.preview_area {
+  transition: all 0s linear;
+  opacity: 0;
+  max-height: 0px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+  text-align: center; }
+
+.preview_area.cell {
+  background: none;
+  display: none; }
+
+.preview_boxes {
+  display: inline-block;
+  margin-bottom: 10px; }
+
+.infobox_schulapp > .preview_area > .preview_boxes > .info_blocks {
+  margin-right: 8px !important; }
+
+.klickinfo_termine.cell {display: table-cell;opacity: 1}
+.klickinfo_kurse.cell {display: table-cell;opacity: 1}
+
+.preview_titel, .preview_titel_info {
+  letter-spacing: 2px;
+  color: #000;
+  font-family: hunterswood;
+  font-size: 1.3em;
+  padding: 26px;
+  box-sizing: content-box;
+  margin-bottom: 8px; }
+
+.preview_titel_termine {
+  font-size: 2em; }
+
+.preview_img {
+  width: 100%; }
+
+.auswahlbeschreibung, .info_reminder {
+  font-family: hunterswood;
+  font-size: 1.45em;
+  color: #4b4b4b;
+  letter-spacing: 2px;
+  padding: 1em; }
+
+.einzelkursbox {
+  position: relative;
+  height: 100%;
+  width: 110%;
+  right: 10%; }
+
+.kursbeschreibung {
+  border-top-left-radius: 10px;
+  padding: 10px 24px 18px;
+  box-sizing: border-box;
+  width: 80%;
+  color: white;
+  right: -100%;
+  left: auto;
+  position: relative;
+  top: 8px;
+  font-family: helvetica;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 1em; }
+  .kursbeschreibung p {
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 0.9em;
+    letter-spacing: 0.3px; }
+
+.kurstitel {
+  position: relative;
+  margin: 0px;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  font-family: gingerbuck, Roboto, sans-serif; }
+
+.kursbuchung {
+  position: absolute;
+  border: 0;
+  border-radius: 10px;
+  right: 0;
+  color: #fff;
+  font-size: 1.8em;
+  letter-spacing: 5px;
+  font-family: gingerbuck, Roboto, sans-serif;
+  text-shadow: 0 0 4px black;
+  border: 0;
+  padding: 10px 10px 10px 14px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  transition: all 0.8s ease;
+  height: 55px;
+  cursor: pointer; }
+  .kursbuchung:hover {
+    background: rgba(255, 255, 255, 0.88) !important;
+    text-shadow: none; }
+
+.extrainfo_box {
+  margin-top: 8px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.88);
+  color: black;
+  padding: 10px 24px 18px;
+  box-sizing: border-box;
+  width: 80%;
+  max-height: 143px;
+  overflow-y: auto;
+  right: 100%;
+  left: auto;
+  border-radius: 0 0 10px 10px; }
+
+.appendix_box {
+  width: 61%;
+  border-bottom-left-radius: 10px;
+  margin-top: 12px;
+  position: absolute;
+  border-radius: 10px 0 0 10px;
+  padding: 3px 0px 2px 0px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.65);
+  right: 100%; }
+
+.quad {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+  margin-right: 20px;
+  transform: rotateZ(-15deg);
+  position: relative; }
+
+.TIME_NAME {
+  font-family: hunterswood, sans-serif;
+  letter-spacing: 0.07em;
+  font-weight: 200;
+  font-size: 1.4em;
+  text-align: right;
+  color: #303030;
+  margin-bottom: 12px; }
+
+.info_blocks {
+  text-align: center;
+  display: inline-block;
+  font-family: helvetica;
+  font-weight: 500;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  color: #252525;
+  border-radius: 4px;
+  padding: 10px 16px;
+  margin: 1px;
+  background: white; }
+
+.EXTRA_INFO_LINE {
+  margin-bottom: 0;
+  padding: 0;
+  display: inline;
+  font-family: helvetica; }
+
+.extrainfo_slider {
+  font-family: helvetica; }
+
+.mehrinfos_button {
+  text-align: center;
+  display: inline;
+  font-weight: 500;
+  font-size: 1.8em;
+  padding: 2px 16px;
+  background: white;
+  right: 180px;
+  height: 55px;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  transition: all 0.4s linear;
+  cursor: pointer; }
+
+.shorter_appendix {
+  transform: translate3d(142.1%, 0px, 0px) !important;
+  width: 443px;
+}
+
+#mehrinfos_container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  font-family: helvetica;
+  transition: opacity 1s ease-in;
+  overflow-y: auto; }
+
+#mehrinfos_title {
+  display: inline;
+  left: 35px;
+  top: -10px;
+  position: absolute;
+  color: white;
+  font-family: hunterswood;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 4px black; }
+
+#mehrinfos_text {
+  color: white;
+  padding: 2em 3em 0em 3em;
+  overflow-y: auto;
+}
+
+#mehr_bilder {
+  border: 0;
+  width: 90%;
+  margin: 0 auto;
+  height: 60%;
+  position: relative;
+  top: 20%;
+  transition: left 0.8s ease; 
+}
+
+.extra_bild {
+  width: 50%;
+  top: 10%;
+  position: absolute; 
+  transition: top 0.8s ease-in;
+}
+#mehr_bilder div {
+  transform: rotate(-2deg);
+}
+/* bei jedem 2. Bild: */
+#mehr_bilder div:nth-child(even) {
+  transform: rotate(2deg);
+}
+.erstes_bild {
+ left: 0;
+}
+/* nur wenn mehr als 2 bei jd. 2. Bild, daher programmatisch!: */;
+.hochgestelltes_bild {
+  top:0;
+}
+.nurein_bild {
+
+}
+.nurzwei_bilder {
+  top:10% !important;
+  transform:none !important;
+}
+
+.wird_geladen {
+  letter-spacing: 4px;
+  display: inline;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 160px;
+  text-align: center;
+  color: white; }
+  .wird_geladen span {
+    font-family: heartstrings;
+    text-shadow: 1px 1px 10px black;
+    font-size: 1.8em;
+    font-weight: 500; }
+
+.footprint {
+  position: relative;
+  bottom: -44px;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 0.95em; }
+
+.hunter {
+  font-family: hunterswood; }
+
+.ginger {
+  font-family: gingerbuck; }
+
+.imp_link {
+  bottom: 45px;
+  position: fixed;
+  right: 40px;
+  font-size: 1.4em;
+  color: white;
+  font-family: gingerbuck;
+  letter-spacing: 5px;
+  text-shadow: 0 0 7px black, 0 0 4px black, 1px 0 2px black, -1px 0 2px black, 0px 1px 2px black; }
+
+.impressum {
+  width: 95%; }
+
+.imp_cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 90px;
+  position: relative; }
+
+.inner {
+  padding: 3em 8% 4em;
+  background: white; }
+  .inner h1 {
+    font-family: gingerbuck; }
+
+.float_behaelter {
+  position: relative;
+  width: 70%;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.rechtsgefloatet {
+  float: right;
+  width: 50%;
+  max-width: 280px; }
+
+.linksgefloatet {
+  width: 50%;
+  display: inline-block; }
+
+.kug {
+  width: 80%;
+  float: right; }
+
+.center {
+  text-align: center; }
+
+.overflowing {
+  overflow: visible; }
+
+.pinklink {
+  text-decoration: underline;
+  color: #E30575; }
+  .pinklink:hover {
+    font-family: stringbeans; }
+
+.gruenlink {
+  text-decoration: underline;
+  color: #E30575; }
+  .gruenlink:hover {
+    font-family: stringbeans; }
+
+.orangelink {
+  text-decoration: underline;
+  color: #E30575; }
+  .orangelink:hover {
+    font-family: stringbeans; }
+
+.gelblink {
+  text-decoration: underline;
+  color: #E30575; }
+  .gelblink:hover {
+    font-family: stringbeans; }
+
+h2 {
+  font-family: heartstrings;
+  letter-spacing: 7px; }
+
+#behaelter_aktuelles_n {
+  left: 0%; }
+
+.behaelter_aktuelles_n {
+  height: 100%;
+  position: relative;
+  transition: 1s all ease-in;
+  opacity: 0.88; }
+
+.verdrehtes_semikolon {
+  transform: rotate(90deg); }
+
+.slide_link {
+  padding: 6px 12px 6px;
+  margin-left: 4px;
+  display: inline;
+  position: relative;
+  border: 1px solid white;
+  text-shadow: 0 0 7px black;
+  color: white;
+  line-height: 1;
+  font-size: 22px;
+  font-family: gingerbuck;
+  font-weight: 500;
+  z-index: 1000;
+  cursor: pointer;
+  background: url(../IMG/leinwand.jpg); }
+
+.umrandung {
+  border: 3px solid white; }
+
+.kontakt_box {
+  height: 100%;
+  width: 100%; }
+  .kontakt_box h3 {
+    font-family: hunterswood;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    color: #404040; }
+  .kontakt_box p {
+    font-family: helvetica; }
+
+.telefonbox {
+  padding: 28px 80px; }
+
+.netzbox {
+  padding: 50px 0px; }
+  .netzbox h3 {
+    text-align: center; }
+
+.kontakt_container {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  top: 45px; }
+  .kontakt_container a {
+    color: #ea6300; }
+
+.imagebox {
+  text-align: center;
+  width: 33%;
+  display: inline-block; }
+  .imagebox img {
+    display: inline-block;
+    width: 85%; }
+  .imagebox img.vorhanden {
+    opacity: 0.88;
+    transition: 0.5s all ease-in; }
+  .imagebox img.nicht_vorhanden {
+    opacity: 0.4;
+    transition: 0.3s all ease; }
+  .imagebox p {
+    text-align: center; }
+  .imagebox:hover img.vorhanden {
+    transform: rotateZ(360deg);
+    opacity: 1; }
+  .imagebox:hover img.nicht_vorhanden {
+    transform: rotateZ(-360deg);
+    opacity: 0.2; }
+
+.einzelbild_event {
+  background-size: contain;
+  width: 100%;
+  height: 412px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: block;
+  background-position: center; }
+
+.multibilder_event h3 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-family: gingerbuck;
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  top: 170px;
+  text-shadow: 0px 0px 6px black; }
+.multibilder_event p {
+  top: 206px;
+  position: absolute;
+  color: black;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 22px 48px;
+  margin: 0;
+  font-family: hunterswood;
+  font-size: 1.2em; }
+
+.bilderteil {
+  position: absolute;
+  top: 0; }
+
+.schatten {
+  transition: box-shadow 0.5s ease; }
+
+.schattenrand {
+  box-shadow: 0 0 42px 16px rgba(0, 0, 0, 0.6); }
+
+.addresstext {
+  width: 300px; }
+
+.impressum_body {
+  overflow-y: scroll; }
+
+.translate1 {
+  transform: translate3d(-100%, 0, 0); }
+
+.translate2 {
+  transform: translate3d(150%, 0, 0); }
+
+.translate3 {
+  transform: translate3d(133%, 0, 0); }
+
+.mit_weiss_drunter {
+  background: rgba(250, 250, 250, 0.88); }
+
+.schattenrand_weiss {
+  box-shadow: 0 0 42px 16px rgba(255, 255, 255, 0.6); }
+
+.team_namenliste_container {
+  width: 557px;
+  height: 100%;
+  position: relative;
+  left: 0;
+  overflow-x: hidden; }
+
+.team_namenliste {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  left: 0; }
+
+.team_streifen {
+  width: 100%;
+  background: rgba(212, 213, 0, 0.95);
+  text-align: center; }
+
+.gif {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  right: -50%;
+  top: -100%;
+  margin: 0;
+  padding: 0; }
+
+#durchlauf {
+  width: 293px;
+  bottom: 28px;
+  position: relative;
+  float: right; }
+
+#schulformular {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  font-family: helvetica;
+  transition: opacity 1s ease-in;
+  overflow-y: auto; }
+  #schulformular h3 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: hunterswood;
+    font-size: 1.4em; }
+  #schulformular ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0; }
+    #schulformular ul li {
+      margin: 8px 0;
+      position: relative;
+      list-style: none;
+      width: 100%; }
+  #schulformular label {
+    display: block;
+    font-family: hunterswood;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    margin-bottom: 3px; }
+  #schulformular input {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 5px 0;
+    font-size: 1em;
+    width: 100%; }
+  #schulformular textarea {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 5px 0;
+    font-size: 1em;
+    width: 100%; }
+  #schulformular p.resumee {
+    padding: 0 10%;
+    margin-top: 0px;
+    font-size: 0.85em;
+    transition: opacity 1s ease-in; }
+  #schulformular #submit {
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    padding: 10px 0;
+    font-family: gingerbuck;
+    font-size: 2em; }
+
+.hg_blende {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  background-blend-mode: darken;
+  transition: all 1s ease; }
+
+.zumachen {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+  display: inline;
+  font-weight: 500;
+  font-size: 1.6em;
+  padding: 2px 16px;
+  color: white;
+  right: 18px;
+  height: 55px;
+  bottom: 10px;
+  outline: none;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  font-family: gingerbuck;
+  transition: all 1s ease-in;
+  border: none; }
+
+/*# sourceMappingURL=kube.css.map */

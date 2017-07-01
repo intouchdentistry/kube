@@ -1,0 +1,35 @@
+/*
+nur die Tabs / Grußzeile Aktuelles
+*/
+
+
+.sectionheading {
+    position: relative;
+    top: -44px;
+    margin: 0;
+    text-align: center;
+    display: block;
+}
+
+.floatright {
+	top: 50px;
+    left: 65px;
+    position: absolute;
+}
+
+.Logo_Bild {
+	height: 80px
+}
+#logoK {
+	height: 110px
+}
+
+.geschrumpft img {height: 60px}
+.geschrumpft #logoK {height: 80px}
+
+.telefonbox {
+    padding: 28px 40px;
+}
+
+
+
